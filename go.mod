@@ -1,4 +1,4 @@
-module test3
+module SC2024
 
 go 1.21.6
 

@@ -1,16 +1,19 @@
 package controllers
 
 import (
-	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v2"
+	"SC2024/models"
+	"time"
 )
 
 // Profile screen endpoint
-func getProfile(c *fiber.Ctx) error {
+func GetProfile(c *fiber.Ctx) error {
 	// Mock user data
-	user := User{
+	user := models.User{
+		ID: "1",
 		Name:  "John Doe",
 		Point: 100,
-		Activities: []Activity{
+		Activities: []models.Activity{
 			{
 				ID:    "1",
 				Name:  "Activity 1",
@@ -19,7 +22,7 @@ func getProfile(c *fiber.Ctx) error {
 				Point: 10,
 			},
 		},
-		Achievements: []Achievement{
+		Achievements: []models.Achievement{
 			{
 				ID:    "1",
 				Name:  "Achievement 1",

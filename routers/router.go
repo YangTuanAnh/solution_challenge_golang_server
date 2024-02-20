@@ -1,12 +1,14 @@
-package router
+package routers
 
 import (
-	"github.com/gofiber/fiber/v3"
-	"controllers"
+	"github.com/gofiber/fiber/v2"
+	"SC2024/controllers"
 )
 
-app.Get("/", func(c fiber.Ctx) error {
-	return c.SendString("Hello, World 👋!")
-})
-
-app.Get("/profile", controllers.getProfile)
+func Initalize(app *fiber.App) {
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World 👋!")
+	})
+	
+	app.Get("/user", controllers.GetProfile)
+}

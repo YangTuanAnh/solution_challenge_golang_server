@@ -1,9 +1,9 @@
 package main
 
 import (
-    "github.com/gofiber/fiber/v3"
+    "github.com/gofiber/fiber/v2"
     "github.com/gofiber/fiber/v2/middleware/cors"
-    "SC203"
+    "SC2024/routers"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 		AllowOrigins: "*", // comma string format e.g. "localhost, nikschaefer.tech"
 		AllowHeaders: "Origin, Content-Type, Accept",
 	}))
-    router.Initalize(app)
+    routers.Initalize(app)
 
     app.Listen(":3000")
 }
