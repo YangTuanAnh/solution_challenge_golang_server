@@ -4,9 +4,14 @@ import (
     "github.com/gofiber/fiber/v2"
     "github.com/gofiber/fiber/v2/middleware/cors"
     "SC2024/routers"
+    "SC2024/pkg/firebase"
+    "SC2024/pkg/config"
 )
 
 func main() {
+    config.Load()
+    firebase.InitializeFirebaseApp()
+
     app := fiber.New()
 
     app.Use(cors.New(cors.Config{
