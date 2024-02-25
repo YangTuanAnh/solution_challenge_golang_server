@@ -1,5 +1,9 @@
 # Solution Challenge 2024 - Golang Server
 
+## Architecture
+
+![Architecture](architecture.png)
+
 ## Technologies
 
 Database: Firebase, Firestore, Firebase Authentication
